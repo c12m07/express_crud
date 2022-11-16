@@ -9,6 +9,10 @@ app.use(express.json());
 
 app.use(Cors());
 
+app.get("/", (req, res) => {
+  res.send({ message: "funciona" });
+});
+
 try {
   db.authenticate();
   console.log('Connection has been established succesfully');
