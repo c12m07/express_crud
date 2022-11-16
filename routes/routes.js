@@ -1,5 +1,5 @@
 import express from 'express'
-
+import isAuth from '../middlewares/auth.js'
 import {
   getMedicamentos,
   getMedicamentoById,
@@ -10,14 +10,14 @@ import {
 
 const Router = express.Router();
 
-Router.get('/medicamentos', getMedicamentos);
+Router.get('/medicamentos', isAuth, getMedicamentos);
 
-Router.get('/medicamentos/:id', getMedicamentoById);
+Router.get('/medicamentos/:id', isAuth, getMedicamentoById);
 
-Router.post('/medicamentos', createMedicamento);
+Router.post('/medicamentos', isAuth, createMedicamento);
 
-Router.put('/medicamentos/:id', updateMedicamento);
+Router.put('/medicamentos/:id', isAuth, updateMedicamento);
 
-Router.delete('/medicamentos/:id', deleteMedicamento);
+Router.delete('/medicamentos/:id', isAuth, deleteMedicamento);
 
 export default Router
