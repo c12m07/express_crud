@@ -24,6 +24,10 @@
 
 ![This is an image](https://github.com/c12m07/express_crud/blob/main/fotos/accesoAListConToken.jpg)
 
+### Base de datos
+
+![This is an image](https://github.com/c12m07/express_crud/blob/main/fotos/tablaUsers.jpg)
+
 ***
 
 # VARIABLES DE ENTORNO
